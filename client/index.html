@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Blog Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="gradient-bg"></div>
+    <main class="container">
+      <section class="card">
+        <h1>AI Blog Generator</h1>
+        <p class="subtitle">Generate a short blog post </p>
+        <form id="generate-form">
+          <label for="topic">Topic</label>
+          <input id="topic" name="topic" type="text" placeholder="e.g., Ada Lovelace" required />
+
+          <div class="row">
+            <div class="field">
+              <label for="tone">Tone</label>
+              <select id="tone" name="tone">
+                <option>Formal</option>
+                <option>Informal</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="length">Length</label>
+              <select id="length" name="length">
+                <option>Short</option>
+                <option selected>Medium</option>
+                <option>Long</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button id="generate-btn" type="submit">Generate</button>
+            <button id="copy-btn" type="button" class="secondary">Copy</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card output-card">
+        <h2>Result</h2>
+        <pre id="result" class="result" aria-live="polite"></pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
+
+
